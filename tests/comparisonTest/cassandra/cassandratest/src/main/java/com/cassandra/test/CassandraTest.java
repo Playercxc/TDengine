@@ -19,12 +19,18 @@ import java.util.Random;
 import java.math.*;
 import java.lang.reflect.Method;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.Level;
+import org.apache.log4j.BasicConfigurator;
+
 
 public class CassandraTest{
   
   public static void main(String args[]) {
-    
-     
+
+    BasicConfigurator.configure();
+    Logger.getRootLogger().setLevel(Level.OFF);
+
     // begin to parse argument
     String datadir = "/home/ubuntu/testdata";
     String sqlfile  = "/home/ubuntu/fang/cassandra/q1.txt";
